@@ -71,7 +71,7 @@ in
               description = "Default orientation for the root container.";
             };
             on-window-detected = lib.mkOption {
-              type = listOf str;
+              type = listOf anything;
               default = [ ];
               description = "Commands to run every time a new window is detected.";
             };
