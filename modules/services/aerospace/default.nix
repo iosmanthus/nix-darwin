@@ -150,6 +150,7 @@ in
       environment.systemPackages = [ cfg.package ];
 
       launchd.user.agents.aerospace = {
+        path = [ config.environment.systemPath ];
         command =
           "${cfg.package}/Applications/AeroSpace.app/Contents/MacOS/AeroSpace"
           + (lib.optionalString (cfg.settings != { }) " --config-path ${configFile}");
